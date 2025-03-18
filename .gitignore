@@ -1,0 +1,33 @@
+# Archivos de sistema
+.DS_Store
+Thumbs.db
+
+# Archivos temporales
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# Archivos de logs
+*.log
+
+# Archivos temporales generados por el IDE/editor
+*.idea/
+.vscode/
+*.iml
+
+# Archivos del sistema operativo
+*.bak
+*.old
+
+# Archivos de compilación o binarios
+*.out
+*.class
+*.o
+*.exe
+
+# Directorios temporales
+tmp/
+temp/
+.cache/
