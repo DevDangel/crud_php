@@ -21,8 +21,6 @@ if($conexion){
     <title>Document</title>
 </head>
 <body>
-    <h1>Luisa amor</h1>
-
-    <p>Sara mi segunda novia</p>
+    
 </body>
 </html>
