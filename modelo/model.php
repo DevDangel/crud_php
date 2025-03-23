@@ -1,5 +1,5 @@
 <?php
-require_once("C:/xampp/htdocs/crud_php/config/database.php");
+require_once("C:/xampp/htdocs/crud_php/config/database.php"); //Mi ruta: C:\xampp\htdocs\crud_php\config/database.php
 //angel: SELECT(WHERE) INSERT, || eduard : UPDATE and DELETE
 class userModel{
     private $conn;
@@ -47,6 +47,30 @@ class userModel{
         }
         return false;
 
+    }
+
+    public function updateUser($id,$nombre,$apellido,$email){
+        $query = "UPDATE personas SET nombre = :nombre, apellido = :apellido, email = :email";
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(":nombre",$nombre);
+        $stmt->bindParam(":apellido",$apellido);
+        $stmt->bindParam(":email",$email);
+
+        if($stmt->execute()){
+            return true;
+        }
+        return false;
+    }
+
+    public function deleteUser($id){
+        $query = "DELETE FROM personas WHERE id = :id";
+        $stmt = $this->conn->prepare($query);
+        $stmt->bindParam(":id", $id, PDO::PARAM_INT);
+        if($stmt->execute()){
+            return true;
+        }
+        return false;
     }
 }
 
