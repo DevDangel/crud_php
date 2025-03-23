@@ -19,6 +19,7 @@ Class Database{
         }catch(PDOException $e){
             echo "Error de conexion".$e->getMessage();
         }
+        return $this->conn;
     }
 
 
